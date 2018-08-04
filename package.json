@@ -68,14 +68,13 @@
     "redux-auth-wrapper": "^1.0.0",
     "redux-saga": "^0.15.3",
     "redux-thunk": "^2.3.0",
-    "web3": "1.0.0-beta.34",
-    "zos": "^1.1.0"
+    "web3": "1.0.0-beta.34"
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "start:lambda": "netlify-lambda serve src/lambda",
+    "start:lambda": "netlify-lambda serve lambda",
     "build": "node scripts/build.js",
-    "build:lambda": "netlify-lambda build src/lambda",
+    "build:lambda": "netlify-lambda build lambda",
     "test": "node scripts/test.js --env=jsdom",
     "chain": "geth --datadir=\"/tmp/eth/60/01\" --nodiscover --maxpeers 0 --port 30301 --rpc --rpcapi \"db,eth,net,web3\" --rpcport 8101 --verbosity 6 console"
   },
