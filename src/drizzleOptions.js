@@ -1,6 +1,6 @@
 
-import SimpleStorage from './../build/contracts/SimpleStorage.json'
-import TutorialToken from './../build/contracts/TutorialToken.json'
+import SimpleStorage from './contracts/SimpleStorage.json'
+import TutorialToken from './contracts/TutorialToken.json'
 
 const drizzleOptions = {
   web3: {

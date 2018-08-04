@@ -1,3 +1,8 @@
+require("babel-register")({
+  ignore: /node_modules\/(?!zeppelin-solidity)/
+});
+require("babel-polyfill");
+
 module.exports = {
   migrations_directory: "./migrations",
   networks: {
@@ -12,5 +17,5 @@ module.exports = {
       enabled: true,
       runs: 500
     }
-  } 
+  }
 };
