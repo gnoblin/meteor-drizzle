@@ -61,7 +61,6 @@
     "babel-register": "^6.26.0",
     "deepmerge": "^2.1.1",
     "eth-block-tracker-es5": "^2.3.2",
-    "global": "^4.3.2",
     "is-plain-object": "^2.0.4",
     "netlify-lambda": "^0.4.0",
     "react": "^15.4.2",
