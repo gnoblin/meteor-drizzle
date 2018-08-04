@@ -1,5 +1,4 @@
 [build]
-  base    = "dapp"
   Command = "yarn build && yarn build:lambda"
   Functions = "lambda"
   Publish = "build"
