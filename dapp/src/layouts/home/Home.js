@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { AccountData, ContractData, ContractForm } from 'drizzle-react-components'
 import logo from '../../logo.png'
 
-import asteroid from '../../common/asteroid';
+//import asteroid from '../../common/asteroid';
 
 class Home extends Component {
   constructor(props, context) {
@@ -16,17 +16,10 @@ class Home extends Component {
     this.handleLogin = this.handleLogin.bind(this);
   }
   handleAddTodo(e) {
-    if (e.key === 'Enter') {
-      const elem = e.target;
-      e.preventDefault();
-      if (elem.value) {
-        this.props.dispatchCallAddTodo(elem.value);
-        elem.value = '';
-      }
-    }
+    
   }
   handleLogout() {
-    asteroid.logout();
+    //asteroid.logout();
   }
   handleLogin(e) {
     // this.context.drizzle.web3.eth.sign(hash, this.props.accounts[0], (err,res) => console.log(err,res))
@@ -34,13 +27,7 @@ class Home extends Component {
     const hash = this.context.drizzle.web3.utils.sha3(e.target.username.value);
     console.log(hash);
 
-    asteroid.loginWithPassword({
-      username: e.target.username.value,
-      password: hash,
-    }).then((result) => {console.log(result)})
-      .catch((error) => {
-        console.error(error.message);
-    });
+  
   }
   renderTasks() {
     if (this.props.user && this.props.user.username) {
@@ -51,23 +38,6 @@ class Home extends Component {
             <button onClick={this.handleLogout}>Logout</button>
           </div>
 
-          <h3>Todos</h3>
-          <div>
-            <input
-              type="text"
-              placeholder="Add todo item ..."
-              onKeyPress={this.handleAddTodo}
-            />
-          </div>
-          <ul>
-            {this.props.todos.map((t, i) =>
-              <li key={i}>
-                <span className="text">
-                  <strong>{t.data !== undefined ? t.data :'n/a'}</strong>: {t.text}
-                </span>
-              </li>
-            )}
-          </ul>
         </div>
       )
     }
@@ -109,26 +79,6 @@ class Home extends Component {
             <br/><br/>
           </div>
 
-          <div className="pure-u-1-1">
-          <h3>Todos</h3>
-          <div>
-            <input
-              type="text"
-              placeholder="Add todo item ..."
-              onKeyPress={this.handleAddTodo}
-            />
-          </div>
-          <ul>
-            {this.props.todos.map((t, i) =>
-                <li key={i}>
-      <span className="text">
-        <strong>{t.data !== undefined ? t.data :'n/a'}</strong>:
-        {t.text}
-      </span>
-                </li>
-            )}
-          </ul>
-          </div>
 
           <div className="pure-u-1-1">
             <h2>SimpleStorage</h2>
