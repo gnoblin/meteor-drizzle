@@ -61,6 +61,7 @@
     "babel-register": "^6.26.0",
     "deepmerge": "^2.1.1",
     "eth-block-tracker-es5": "^2.3.2",
+    "global": "^4.3.2",
     "is-plain-object": "^2.0.4",
     "netlify-lambda": "^0.4.0",
     "react": "^15.4.2",
@@ -80,8 +81,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "start:lambda": "netlify-lambda serve lambda",
-    "build:lambda": "netlify-lambda build lambda",
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "build:lambda": "netlify-lambda build src/lambda",
     "test": "node scripts/test.js --env=jsdom",
     "chain": "geth --datadir=\"/tmp/eth/60/01\" --nodiscover --maxpeers 0 --port 30301 --rpc --rpcapi \"db,eth,net,web3\" --rpcport 8101 --verbosity 6 console"
   },
