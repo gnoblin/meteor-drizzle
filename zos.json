@@ -1,5 +1,9 @@
 {
   "name": "dapp",
   "version": "0.1.0",
-  "contracts": {}
+  "contracts": {},
+  "stdlib": {
+    "name": "openzeppelin-zos",
+    "version": "^1.9.1"
+  }
 }

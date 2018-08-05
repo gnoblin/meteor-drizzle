@@ -1,13 +1,13 @@
 
-import SimpleStorage from './lambda_contracts/SimpleStorage.json'
-import TutorialToken from './lambda_contracts/TutorialToken.json'
+import SimpleStorage from './contracts/SimpleStorage.json'
+import TutorialToken from './contracts/TutorialToken.json'
 
 const drizzleOptions = {
   web3: {
     block: false,
     fallback: {
       type: 'ws',
-      url: 'ws://127.0.0.1:8545'
+      url: 'ws://127.0.0.1:9545'
     }
   },
   contracts: [

@@ -1,0 +1,20 @@
+{
+  "contracts": {},
+  "proxies": {},
+  "app": {
+    "address": "0xd0ae074d34e056bb6de46e317d97a39d8257e5f0"
+  },
+  "version": "0.1.0",
+  "package": {
+    "address": "0xa9e8d0ac2a8bfb090f1fc092f60712ab3f7bbb67"
+  },
+  "provider": {
+    "address": "0xb09de4b387afa57b055ccfe61f70ccbfe5b8aaef"
+  },
+  "stdlib": {
+    "address": "0x06bfd55be56ea86a19eccc3f9dd2a82fd0e49f56",
+    "customDeploy": true,
+    "name": "openzeppelin-zos",
+    "version": "^1.9.1"
+  }
+}
